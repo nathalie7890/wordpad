@@ -26,6 +26,8 @@ class MainFragment : Fragment() {
     private val completedWordsFragment = CompletedWordsFragment.getInstance()
     private val viewModel: MainViewModel by viewModels()
 
+    val arr = listOf("Maaa", "amm")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
 
@@ -38,6 +40,10 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var currentPage = 0
+
+        val ans = arr.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it })
+
+        Log.d("debugging", ans.toString())
 
         val adapter = ViewPagerAdapter(
             listOf(wordsFragment, completedWordsFragment),

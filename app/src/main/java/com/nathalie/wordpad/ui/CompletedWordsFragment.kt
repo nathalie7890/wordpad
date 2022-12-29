@@ -51,7 +51,10 @@ class CompletedWordsFragment : Fragment() {
         }
 
         mainViewModel.refreshCompletedWords.observe(viewLifecycleOwner) {
-            refresh("")
+            if(it) {
+                refresh("")
+                mainViewModel.shouldRefreshWords(false)
+            }
         }
 
         binding.search.btnSearch.setOnClickListener {
@@ -61,9 +64,7 @@ class CompletedWordsFragment : Fragment() {
     }
 
     fun refresh(str: String) {
-        lifecycleScope.launchWhenResumed {
             viewModel.getWords(str)
-        }
     }
 
     fun setupAdapter() {
