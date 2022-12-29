@@ -72,7 +72,21 @@ class WordsFragment : Fragment() {
             val dialogBinding = SortDialogBinding.inflate(layoutInflater)
             val myDialog = Dialog(requireContext(), R.style.WordPad_AlertDialog)
 
+            dialogBinding.radioGroup.setOnCheckedChangeListener { _, id ->
+                when(id) {
+                    R.id.btnAsc -> Log.d("debugging", "Ascending")
+                    else -> Log.d("debugging", "Descending")
+                }
 
+            }
+
+            dialogBinding.radioGroup2.setOnCheckedChangeListener { _, id ->
+                when(id) {
+                    R.id.btnAsc -> Log.d("debugging", "Title")
+                    else -> Log.d("debugging", "Date")
+                }
+
+            }
             myDialog.setContentView(dialogBinding.root)
             myDialog.setCancelable(true)
             myDialog.show()
