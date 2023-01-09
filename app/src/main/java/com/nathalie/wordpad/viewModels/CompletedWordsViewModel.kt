@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.nathalie.wordpad.Model.Word
+import com.nathalie.wordpad.model.Word
 import com.nathalie.wordpad.repository.WordRepository
 
 class CompletedWordsViewModel(private val repo: WordRepository) : ViewModel() {

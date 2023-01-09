@@ -1,9 +1,8 @@
 package com.nathalie.wordpad.repository
 
-import android.util.Log
-import com.nathalie.wordpad.Model.Word
+import com.nathalie.wordpad.model.Word
 
-class WordRepository {
+class WordRepository{
     private var counter = 1L
     private val wordsMap: MutableMap<Long, Word> = mutableMapOf(
         0L to Word(

@@ -1,4 +1,4 @@
-package com.nathalie.wordpad.Model
+package com.nathalie.wordpad.model
 
 import java.text.SimpleDateFormat
 import java.util.*

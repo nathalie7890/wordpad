@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.snackbar.Snackbar
 import com.nathalie.wordpad.MainActivity
-import com.nathalie.wordpad.Model.Word
+import com.nathalie.wordpad.model.Word
 import com.nathalie.wordpad.databinding.FragmentAddWordBinding
 import com.nathalie.wordpad.viewModels.AddWordViewModel
 
